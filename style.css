@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -19,7 +20,7 @@ body {
 
 header {
   height: 100vh;
-  padding: 36px 100px;
+  padding: 36px 5%; /* Adjusted padding for responsiveness */
   background-image: url(asset/model_bw.png);
   background-position: right;
   background-size: contain;
@@ -106,6 +107,7 @@ header nav .search i {
   background-color: transparent;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5%; /* Adjusted padding for responsiveness */
 }
 
 .landing .intro {
@@ -139,11 +141,6 @@ header nav .search i {
   transition: all ease 0.5s;
 }
 
-.intro button:hover {
-  background-color: #fec86a;
-  color: #34353b;
-}
-
 .socials {
   display: flex;
   flex-direction: column;
@@ -166,7 +163,7 @@ header nav .search i {
 .about {
   height: 50vh;
   width: 100vw;
-  padding: 100px;
+  padding: 5%;
 }
 
 .about h1 {
@@ -178,7 +175,7 @@ header nav .search i {
 
 .about .description {
   display: flex;
-  align-items: start;
+  flex-direction: column;
 }
 
 .about .description .line {
@@ -202,7 +199,7 @@ header nav .search i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 100px;
+  padding: 5%;
 }
 
 .skills h1 {
@@ -252,128 +249,80 @@ header nav .search i {
   color: #fbfbfb;
 }
 
-.portfolio {
+.certifications {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 100px;
+  background-color: #3d3e42;
+  padding: 5%;
+  text-align: center;
 }
 
-.portfolio h1 {
+.certifications h1 {
   font-size: 56px;
   font-weight: 700;
   color: #fbfbfb;
   font-family: "Libre Baskerville", serif;
 }
 
-.portfolio-cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  margin-top: 50px;
-  gap: 2.5vh;
-}
-
-.portfolio-card {
-  position: relative;
-  height: 30vw;
-  width: 30vw;
-  background-color: #3d3e42;
-  border-radius: 20px;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5vh;
-  transition: all ease 0.5s;
-}
-
-.portfolio-card img {
-  position: relative;
-  height: 30vw;
-  width: 30vw;
-  object-fit: cover;
-}
-
-.portfolio-card .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.cert-cards {
   display: flex;
-  flex-direction: column;
-  gap: 2.5vh;
-  height: 30vw;
-  width: 30vw;
-  background-color: #34353ba2;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  transition: all ease 0.5s;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
-.portfolio-card .overlay h3 {
-  color: #fbfbfb;
-  font-size: 24px;
-}
-
-.portfolio-card .overlay p {
-  color: #fbfbfb;
-  font-size: 16px;
-  text-align: center;
-}
-
-.portfolio-card .overlay button {
-  height: 36px;
-  width: 108px;
-  background-color: #fec86a;
-  border: 1px solid #fec86a;
+.cert-card {
+  width: 100%; /* Use full width on smaller screens */
+  max-width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  color: #34353b;
-  font-size: 12px;
-  transition: all ease 0.5s;
-  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-card .overlay:hover {
-  opacity: 1;
+.cert-card img
+.cert-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-.portfolio button {
-  margin-top: 50px;
-  height: 48px;
-  width: 144px;
-  background-color: #fec86a;
-  border: 1px solid #fec86a;
-  border-radius: 8px;
-  color: #34353b;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all ease 0.5s;
+.cert-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.portfolio button:hover {
-  background-color: #cc9e4e;
+.cert-card p {
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.cert-card a {
+  display: block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .experience {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
   width: 100vw;
   position: relative;
   align-items: center;
   justify-content: center;
 }
 
-.darker-div {
+.experience .darker-div {
   background-color: #34353a;
   width: 100vw;
   height: 10vh;
-}
-.experience .description p span {
-  color: #fec86a;
 }
 
 .experience h1 {
@@ -386,17 +335,16 @@ header nav .search i {
   left: 15%;
 }
 
-.lighter-div {
+.experience .lighter-div {
   background-color: #3d3e42;
   width: 100vw;
-  /* height: 90vh; */
   padding: 10vh;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.lighter-div .exp {
+.experience .lighter-div .exp {
   height: 30vh;
   width: 50vw;
   position: relative;
@@ -433,6 +381,7 @@ header nav .search i {
   top: 55%;
   left: -5%;
 }
+
 .exp-desc h3 {
   color: #fbfbfb;
   font-size: 20px;
@@ -442,13 +391,13 @@ header nav .search i {
 
 .exp-desc p {
   color: #fbfbfb;
-  font-size: 16;
+  font-size: 16px;
   font-weight: 400;
 }
 
 .contact-me {
   width: 100vw;
-  padding: 100px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,6 +413,7 @@ header nav .search i {
 
 .contact {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -475,67 +425,45 @@ header nav .search i {
   gap: 10px;
   margin-top: 7.5vh;
 }
-Additional styles for the Certifications section */
-.certifications {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 100px;
+
+/* Responsive Styling */
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 36px 5%;
+  }
+
+  .landing {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .landing .intro h3 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .intro button {
+    margin-left: 0;
+  }
+
+  .socials {
+    margin-top: 10vh;
+  }
+
+  .about,
+  .skills,
+  .certifications,
+  .experience,
+  .contact-me {
+    padding: 5%;
+  }
+
+  .exp-desc::before {
+    height: 150px;
+  }
 }
- certifications h1 {
-  font-size: 56px;
-  font-weight: 700;
-  color: #ffffff;
-  font-family: "Libre Baskerville", serif; 
-            }      
-            .certifications {
-            background-color: #3d3e42;
-            padding: 50px 0;
-            text-align: center;
-        }
 
-        .cert-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
 
-        .cert-card {
-            width: 300px;
-            padding: 20px;
-            margin: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .cert-card img {
-            width: 100%;
-            max-height: 150px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-
-        .cert-card h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .cert-card p {
-            color: #888;
-            margin-bottom: 15px;
-        }
-
-        .cert-card a {
-            display: block;
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
 
