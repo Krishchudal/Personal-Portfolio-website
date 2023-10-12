@@ -20,7 +20,7 @@ body {
 
 header {
   height: 100vh;
-  padding: 36px 5%; /* Adjusted padding for responsiveness */
+  padding: 36px 5%;
   background-image: url(asset/model_bw.png);
   background-position: right;
   background-size: contain;
@@ -103,36 +103,36 @@ header nav .search i {
 
 .landing {
   display: flex;
-  height: 90vh;
-  background-color: transparent;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%; /* Adjusted padding for responsiveness */
+  flex-direction: column;
+  text-align: center;
+  padding: 0 5%;
 }
 
 .landing .intro {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing .intro h3 {
   color: #fbfbfb;
   font-weight: 400;
   font-size: 32px;
-  margin-left: 10vw;
+  margin-top: 20px;
 }
 
 .landing .intro h3 span {
   color: #fec86a;
   font-weight: 600;
   font-size: 3.5rem;
+  margin-top: 10px;
 }
 
 .intro button {
   height: 48px;
   width: 144px;
   margin-top: 2.5vh;
-  margin-left: 10vw;
   background-color: transparent;
   border: 2px solid #fec86a;
   border-radius: 8px;
@@ -146,7 +146,7 @@ header nav .search i {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 50vh;
+  margin-top: 10vh;
 }
 
 .socials .line {
@@ -161,7 +161,7 @@ header nav .search i {
 }
 
 .about {
-  height: 50vh;
+  height: auto;
   width: 100vw;
   padding: 5%;
 }
@@ -176,13 +176,15 @@ header nav .search i {
 .about .description {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about .description .line {
   height: 2.5px;
-  width: 400px;
+  width: 60%;
   background-color: #fec86a;
-  margin-right: 32px;
+  margin: 32px 0;
 }
 
 .about .description p {
@@ -231,6 +233,7 @@ header nav .search i {
   justify-content: center;
   gap: 2.5vh;
   transition: all ease 0.5s;
+  margin: 10px;
 }
 
 .skill-card:hover {
@@ -274,16 +277,16 @@ header nav .search i {
 }
 
 .cert-card {
-  width: 100%; /* Use full width on smaller screens */
+  width: calc(33.33% - 40px); /* Distribute in three columns with some margin */
   max-width: 300px;
   padding: 20px;
   margin: 20px;
-  border: 1px solid #ddd;
+  border: 
+  1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.cert-card img
 .cert-card img {
   width: 100%;
   max-height: 150px;
@@ -426,44 +429,101 @@ header nav .search i {
   margin-top: 7.5vh;
 }
 
-/* Responsive Styling */
+/* Advanced Responsive Styling */
 
-@media screen and (max-width: 768px) {
-  header {
-    padding: 36px 5%;
+@media screen and (max-width: 576px) {
+  header nav {
+    width: 100%;
   }
 
-  .landing {
+  header nav img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header nav ul {
     flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #34353b;
     text-align: center;
-    padding: 0 5%;
+    display: none;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav .search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header nav .search input {
+    width: 100%;
   }
 
   .landing .intro h3 {
-    margin-left: 0;
-    margin-top: 20px;
+    font-size: 24px;
   }
 
-  .intro button {
-    margin-left: 0;
+  .landing .intro button {
+    margin-top: 10px;
   }
 
   .socials {
-    margin-top: 10vh;
+    margin-top: 20px;
   }
 
-  .about,
-  .skills,
-  .certifications,
-  .experience,
-  .contact-me {
+  .about h1,
+  .skills h1,
+  .certifications h1,
+  .experience h1,
+  .contact-me h1 {
+    font-size: 36px;
+  }
+
+  .about .description .line,
+  .skills .cards .skill-card,
+  .cert-cards .cert-card,
+  .experience .exp,
+  .contact .contact-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about .description .line {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about .description p {
+    font-size: 16px;
+  }
+
+  .skills .cards,
+  .cert-cards,
+  .experience .lighter-div {
     padding: 5%;
   }
 
-  .exp-desc::before {
-    height: 150px;
+  .experience .exp-desc::before {
+    height: 100px;
+  }
+
+  .contact-me .contact {
+    flex-direction: column;
+  }
+
+  .contact-me .contact-card {
+    margin-top: 10px;
   }
 }
-
-
-
