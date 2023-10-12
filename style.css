@@ -436,3 +436,185 @@ header nav .search i {
   gap: 10px;
   margin-top: 7.5vh;
 }
+
+/* Advanced Responsive Styling */
+
+/* Mobile Phones (Portrait) */
+@media only screen and (max-width: 576px) {
+  header nav {
+    width: 100%;
+  }
+
+  header nav img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #34353b;
+    text-align: center;
+    display: none;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav .search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header nav .search input {
+    width: 100%;
+  }
+
+  .landing .intro h3 {
+    font-size: 24px;
+  }
+
+  .landing .intro button {
+    margin-top: 10px;
+  }
+
+  .socials {
+    margin-top: 20px;
+  }
+
+  .about h1,
+  .skills h1,
+  .certifications h1,
+  .experience h1,
+  .contact-me h1 {
+    font-size: 36px;
+  }
+
+  .about .description .line,
+  .skills .cards .skill-card,
+  .cert-cards .cert-card,
+  .experience .exp,
+  .contact .contact-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about .description .line {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about .description p {
+    font-size: 16px;
+  }
+
+  .skills .cards,
+  .cert-cards,
+  .experience .lighter-div {
+    padding: 5%;
+  }
+
+  .experience .exp-desc::before {
+    height: 100px;
+  }
+
+  .contact-me .contact {
+    flex-direction: column;
+  }
+
+  .contact-me .contact-card {
+    margin-top: 10px;
+  }
+}
+
+/* Tablets and Small Laptops */
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  header nav {
+    width: 90%;
+  }
+
+  header nav img {
+    height: 48px;
+    width: 48px;
+  }
+
+  header nav ul li {
+    margin: 0px 15px;
+  }
+
+  header nav .search {
+    width: 250px;
+    margin-top: 0;
+  }
+
+  .landing .intro h3 {
+    font-size: 28px;
+  }
+
+  .landing .intro button {
+    margin-top: 15px;
+  }
+
+  .about h1,
+  .skills h1,
+  .certifications h1,
+  .experience h1,
+  .contact-me h1 {
+    font-size: 42px;
+  }
+
+  .about .description p {
+    font-size: 18px;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px) {
+  header nav {
+    width: 80%;
+  }
+
+  header nav img {
+    height: 64px;
+    width: 64px;
+  }
+
+  header nav ul li {
+    margin: 0px 25px;
+  }
+
+  header nav .search {
+    width: 300px;
+  }
+
+  .landing .intro h3 {
+    font-size: 36px;
+  }
+
+  .landing .intro button {
+    margin-top: 20px;
+  }
+
+  .about h1,
+  .skills h1,
+  .certifications h1,
+  .experience h1,
+  .contact-me h1 {
+    font-size: 48px;
+  }
+
+  .about .description p {
+    font-size: 20px;
+  }
+}
+
