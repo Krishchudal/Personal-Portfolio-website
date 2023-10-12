@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -20,7 +19,7 @@ body {
 
 header {
   height: 100vh;
-  padding: 36px 5%;
+  padding: 36px 100px;
   background-image: url(asset/model_bw.png);
   background-position: right;
   background-size: contain;
@@ -68,6 +67,39 @@ header nav ul li .active {
   color: #fbfbfb;
 }
 
+header nav .search {
+  height: 48px;
+  width: 200px;
+  background-color: #3d3e42;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+header nav .search input {
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  color: #fbfbfb;
+  outline: none;
+}
+
+header nav .search input:focus {
+  border: none;
+  outline: none;
+}
+
+header nav .search input::placeholder {
+  color: #98999a;
+  font-size: 16px;
+}
+
+header nav .search i {
+  color: #98999a;
+}
+
 .landing {
   display: flex;
   height: 90vh;
@@ -107,12 +139,17 @@ header nav ul li .active {
   transition: all ease 0.5s;
 }
 
+.intro button:hover {
+  background-color: #fec86a;
+  color: #34353b;
+}
+
 .socials {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 50vh;
 }
 
 .socials .line {
@@ -127,9 +164,9 @@ header nav ul li .active {
 }
 
 .about {
-  height: auto;
+  height: 50vh;
   width: 100vw;
-  padding: 5%;
+  padding: 100px;
 }
 
 .about h1 {
@@ -141,16 +178,14 @@ header nav ul li .active {
 
 .about .description {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: start;
 }
 
 .about .description .line {
   height: 2.5px;
-  width: 60%;
+  width: 400px;
   background-color: #fec86a;
-  margin: 32px 0;
+  margin-right: 32px;
 }
 
 .about .description p {
@@ -167,7 +202,7 @@ header nav ul li .active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5%;
+  padding: 50px 100px;
 }
 
 .skills h1 {
@@ -199,7 +234,6 @@ header nav ul li .active {
   justify-content: center;
   gap: 2.5vh;
   transition: all ease 0.5s;
-  margin: 10px;
 }
 
 .skill-card:hover {
@@ -216,6 +250,14 @@ header nav ul li .active {
   font-size: 24px;
   font-weight: 400;
   color: #fbfbfb;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
 }
 
 .certifications {
@@ -282,13 +324,14 @@ header nav ul li .active {
 .experience {
   display: flex;
   flex-direction: column;
+  /* height: 100vh; */
   width: 100vw;
   position: relative;
   align-items: center;
   justify-content: center;
 }
 
-.experience .darker-div {
+.darker-div {
   background-color: #34353a;
   width: 100vw;
   height: 10vh;
@@ -300,20 +343,21 @@ header nav ul li .active {
   font-size: 56px;
   font-family: "Libre Baskerville", serif;
   transform: translate(-50%, -50%);
-  top: 10%;
+  top: 15%;
   left: 15%;
 }
 
-.experience .lighter-div {
+.lighter-div {
   background-color: #3d3e42;
   width: 100vw;
-  padding: 10vh;
+  /* height: 90vh; */
+  padding: 20vh;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.experience .lighter-div .exp {
+.lighter-div .exp {
   height: 30vh;
   width: 50vw;
   position: relative;
@@ -350,7 +394,6 @@ header nav ul li .active {
   top: 55%;
   left: -5%;
 }
-
 .exp-desc h3 {
   color: #fbfbfb;
   font-size: 20px;
@@ -360,13 +403,13 @@ header nav ul li .active {
 
 .exp-desc p {
   color: #fbfbfb;
-  font-size: 16px;
+  font-size: 16;
   font-weight: 400;
 }
 
 .contact-me {
   width: 100vw;
-  padding: 5%;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,7 +425,6 @@ header nav ul li .active {
 
 .contact {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -394,284 +436,3 @@ header nav ul li .active {
   gap: 10px;
   margin-top: 7.5vh;
 }
-
-/* Advanced Responsive Styling */
-
-@media screen and (max-width: 576px) {
-  header nav {
-    width: 100%;
-  }
-
-  header nav img {
-    height: 40px;
-    width: 40px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #34353b;
-    text-align: center;
-    display: none;
-  }
-
-  header nav ul.active {
-    display: flex;
-  }
-
-  header nav ul li {
-    margin: 10px 0;
-  }
-
-  header nav .search {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  header nav .search input {
-    width: 100%;
-  }
-
-  .landing .intro h3 {
-    font-size: 24px;
-  }
-
-  .landing .intro button {
-    margin-top: 10px;
-  }
-
-  .socials {
-    margin-top: 20px;
-  }
-
-  .about h1,
-  .skills h1,
-  .certifications h1,
-  .experience h1,
-  .contact-me h1 {
-    font-size: 36px;
-  }
-
-  .about .description .line,
-  .skills .cards .skill-card,
-  .cert-cards .cert-card,
-  .experience .exp,
-  .contact .contact-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about .description .line {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .about .description p {
-    font-size: 16px;
-  }
-
-  .skills .cards,
-  .cert-cards,
-  .experience .lighter-div {
-    padding: 5%;
-  }
-
-  .experience .exp-desc::before {
-    height: 100px;
-  }
-
-  .contact-me .contact {
-    flex-direction: column;
-  }
-
-  .contact-me .contact-card {
-    margin-top: 10px;
-  }
-}
-
-/* Advanced Responsive Styling */
-
-/* Mobile Phones (Portrait) */
-@media only screen and (max-width: 576px) {
-  header nav {
-    width: 100%;
-  }
-
-  header nav img {
-    height: 40px;
-    width: 40px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #34353b;
-    text-align: center;
-    display: none;
-  }
-
-  header nav ul.active {
-    display: flex;
-  }
-
-  header nav ul li {
-    margin: 10px 0;
-  }
-
-  header nav .search {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  header nav .search input {
-    width: 100%;
-  }
-
-  .landing .intro h3 {
-    font-size: 24px;
-  }
-
-  .landing .intro button {
-    margin-top: 10px;
-  }
-
-  .socials {
-    margin-top: 20px;
-  }
-
-  .about h1,
-  .skills h1,
-  .certifications h1,
-  .experience h1,
-  .contact-me h1 {
-    font-size: 36px;
-  }
-
-  .about .description .line,
-  .skills .cards .skill-card,
-  .cert-cards .cert-card,
-  .experience .exp,
-  .contact .contact-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about .description .line {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .about .description p {
-    font-size: 16px;
-  }
-
-  .skills .cards,
-  .cert-cards,
-  .experience .lighter-div {
-    padding: 5%;
-  }
-
-  .experience .exp-desc::before {
-    height: 100px;
-  }
-
-  .contact-me .contact {
-    flex-direction: column;
-  }
-
-  .contact-me .contact-card {
-    margin-top: 10px;
-  }
-}
-
-/* Tablets and Small Laptops */
-@media only screen and (min-width: 577px) and (max-width: 1024px) {
-  header nav {
-    width: 90%;
-  }
-
-  header nav img {
-    height: 48px;
-    width: 48px;
-  }
-
-  header nav ul li {
-    margin: 0px 15px;
-  }
-
-  header nav .search {
-    width: 250px;
-    margin-top: 0;
-  }
-
-  .landing .intro h3 {
-    font-size: 28px;
-  }
-
-  .landing .intro button {
-    margin-top: 15px;
-  }
-
-  .about h1,
-  .skills h1,
-  .certifications h1,
-  .experience h1,
-  .contact-me h1 {
-    font-size: 42px;
-  }
-
-  .about .description p {
-    font-size: 18px;
-  }
-}
-
-/* Desktops */
-@media only screen and (min-width: 1025px) {
-  header nav {
-    width: 80%;
-  }
-
-  header nav img {
-    height: 64px;
-    width: 64px;
-  }
-
-  header nav ul li {
-    margin: 0px 25px;
-  }
-
-  header nav .search {
-    width: 300px;
-  }
-
-  .landing .intro h3 {
-    font-size: 36px;
-  }
-
-  .landing .intro button {
-    margin-top: 20px;
-  }
-
-  .about h1,
-  .skills h1,
-  .certifications h1,
-  .experience h1,
-  .contact-me h1 {
-    font-size: 48px;
-  }
-
-  .about .description p {
-    font-size: 20px;
-  }
-}
-
